@@ -1,6 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
+import { MainDish }from "../utils/maindish"
+import { sides, dessert } from "../utils/sides";
+import SoupsNVeggies from "../utils/soupsngreens";
+import Starters from "../utils/starters";
+
+
+
 export default class Menu extends React.Component {
   render() {
     return (
