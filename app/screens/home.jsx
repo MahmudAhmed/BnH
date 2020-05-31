@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     borderColor: "white",
   },
   mainScroll: {
-    backgroundColor: "#F5F5F5",
+    backgroundColor: "#F2F2F2",
   },
   h1: {
     fontWeight: "bold",

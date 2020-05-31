@@ -2,12 +2,14 @@ const Starters = [
   { 
     item: 'Jumbo Shrimp Cocktail', 
     details: '5 Jumbo Shrimp & House-Made Cocktail Sauce', 
-    price: 14
+    price: 14,
+    url: "https://wallpaperaccess.com/full/1491751.jpg"
   },
   { 
     item: 'Mucho Mussels', 
     details: 'PEI Mussels with Basil, Tomato, White Wine & Garlic', 
-    price: 14
+    price: 14,
+    url: "https://wallpaperaccess.com/full/1491751.jpg"
   },
   {
     item: 'Kung Pao Calamari', 
@@ -32,12 +34,13 @@ const Starters = [
   {
     item: 'Bang Bang Shrimp', 
     details: 'Lightly Fried Chopped Shrimp tossed with Cilantro Lime Chili Sauce', 
-    price: 12
+    price: 12,
   },
   {
     item: 'Baja Fish Taco', 
     details: 'Lightly-Fried Cod, Mango Salsa, Napa Cabbage, Chipotle Mayo', 
-    price: 14
+    price: 14,
+    url: "https://wallpaperaccess.com/full/1491751.jpg"
   },
   {
     item: 'Old Bay-Style Chicken Tacos', 
