@@ -1,0 +1,17 @@
+{
+  "name": "BaitnHook",
+  "displayName": "BaitnHook",
+  "expo": {
+    "name": "BaitnHook",
+    "slug": "BaitnHook",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
