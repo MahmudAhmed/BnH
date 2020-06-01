@@ -63,7 +63,7 @@ export default class Contact extends React.Component {
             <View style={styles.btn}>
               <FontAwesomeIcon icon={faPhone} size={20} color={"green"} />
               <Text style={styles.callNow}>Ready to Order?</Text>
-            </View>
+            </View> 
           </TouchableOpacity>
 
           <TouchableOpacity
