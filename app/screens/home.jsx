@@ -1,11 +1,24 @@
 import React from "react";
-import { ScrollView, ImageBackground, StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  ScrollView,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Linking
+} from "react-native";
+
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default class Home extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}>
+          <Text style={{ width: 20 }}></Text>
           <Image
             style={styles.img}
             source={{
@@ -13,6 +26,11 @@ export default class Home extends React.Component {
                 "https://images.squarespace-cdn.com/content/5e4c85ec9d8d286b95e16196/1582073566753-805DEDK0T3Q6NDZYCOF0/baitnhook-logo.png?content-type=image%2Fpng",
             }}
           />
+          <TouchableOpacity
+            onPress={() => Linking.openURL(`tel:${6466697833}`)}
+          >
+            <FontAwesomeIcon icon={faPhone} size={20} color={"#A7A9AC"} />
+          </TouchableOpacity>
         </View>
         <ScrollView style={styles.mainScroll}>
           <ImageBackground
@@ -26,7 +44,10 @@ export default class Home extends React.Component {
               <Text style={styles.h3White}>
                 There's fresh offers every week
               </Text>
-              <TouchableOpacity style={styles.btnContainer}>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate("Deals")}
+                style={styles.btnContainer}
+              >
                 <Text style={styles.btnTxt}>View Specials</Text>
               </TouchableOpacity>
             </View>
@@ -43,7 +64,10 @@ export default class Home extends React.Component {
               <View style={styles.menuSplash}>
                 <Text style={styles.h2}>Hungry?</Text>
                 <Text style={styles.h3}>Let's fix that</Text>
-                <TouchableOpacity style={styles.btnContainerBlue}>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate("Menu")}
+                  style={styles.btnContainerBlue}
+                >
                   <Text style={styles.btnTxtWhite}>Start Ordering</Text>
                 </TouchableOpacity>
               </View>
@@ -55,7 +79,10 @@ export default class Home extends React.Component {
             <View style={styles.subSplash}>
               <Text style={styles.h21}>Daily Specials</Text>
               <Text style={styles.h3White}>On everything you love</Text>
-              <TouchableOpacity style={styles.btnContainer}>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate("Deals")}
+                style={styles.btnContainer}
+              >
                 <Text style={styles.btnTxt}>View Specials</Text>
               </TouchableOpacity>
             </View>
@@ -65,7 +92,14 @@ export default class Home extends React.Component {
             <View style={[styles.subSplash, { backgroundColor: "#F5343E" }]}>
               <Text style={styles.h21}>Order Seafood Now</Text>
               <Text style={styles.h3White}>Let your favorite come to...</Text>
-              <TouchableOpacity style={styles.btnContainer}>
+              <TouchableOpacity
+                onPress={() =>
+                  Linking.openURL(
+                    "https://www.grubhub.com/restaurant/bait--hook-231-2nd-ave-new-york/555238"
+                  )
+                }
+                style={styles.btnContainer}
+              >
                 <Text style={styles.btnTxt}>Order Now</Text>
               </TouchableOpacity>
             </View>
@@ -78,13 +112,13 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   menuSplash: {
-    backgroundColor: 'white', 
-    width: "100%", 
-    height: '100%', 
-    opacity: 0.8, 
-    flex: 1, 
-    justifyContent: 'center', 
-    alignItems: 'center'
+    backgroundColor: "white",
+    width: "100%",
+    height: "100%",
+    opacity: 0.8,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   imgBackground: {
     height: 200,
@@ -194,6 +228,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 40,
     marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 10,
   },
   img: {
     resizeMode: "contain",

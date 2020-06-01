@@ -1,5 +1,7 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import { TouchableOpacity, Linking, FlatList, StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const SPECIALS = [
   {
@@ -60,6 +62,7 @@ export default class Deals extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}>
+          <Text style={{ width: 20 }}></Text>
           <Image
             style={styles.img}
             source={{
@@ -67,6 +70,11 @@ export default class Deals extends React.Component {
                 "https://images.squarespace-cdn.com/content/5e4c85ec9d8d286b95e16196/1582073566753-805DEDK0T3Q6NDZYCOF0/baitnhook-logo.png?content-type=image%2Fpng",
             }}
           />
+          <TouchableOpacity
+            onPress={() => Linking.openURL(`tel:${6466697833}`)}
+          >
+            <FontAwesomeIcon icon={faPhone} size={20} color={"#A7A9AC"} />
+          </TouchableOpacity>
         </View>
         <View style={styles.splash}>
           <Text style={styles.h1}>SPECIALS</Text>
@@ -84,7 +92,7 @@ export default class Deals extends React.Component {
               <View
                 style={[
                   styles.imgTxt,
-                  this.state.day === item.day || 'Everyday' === item.day
+                  this.state.day === item.day || "Everyday" === item.day
                     ? { backgroundColor: "purple" }
                     : "",
                 ]}
@@ -152,6 +160,10 @@ const styles = StyleSheet.create({
   titleContainer: {
     alignItems: "center",
     marginTop: 40,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 10,
   },
   img: {
     resizeMode: "contain",
