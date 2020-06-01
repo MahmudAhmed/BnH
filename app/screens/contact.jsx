@@ -52,11 +52,6 @@ export default class Contact extends React.Component {
               coordinate={{ latitude: 40.73266, longitude: -73.98509 }}
               title={"Bait & Hook"}
               description={"231 2nd Ave. New York, NY 10003"}
-              onPress={() =>
-                Linking.openURL(
-                  "https://www.google.com/maps/dir//bait+and+hook/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c2599e5abb9fc1:0x2093fdafd77b31ac?sa=X&ved=2ahUKEwj8s_iDvdznAhUAj3IEHV9yC6AQ9RcwCnoECA8QEA"
-                )
-              }
             />
           </MapView>
         </View>
@@ -201,7 +196,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginVertical: 10,
     height: 50,
-    width: 200,
+    width: 180,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -211,6 +206,7 @@ const styles = StyleSheet.create({
   },
   mainBtns: {
     flexDirection: "row",
+    justifyContent: 'center'
   },
   mapStyle: {
     width: Dimensions.get("window").width,

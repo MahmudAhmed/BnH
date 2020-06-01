@@ -163,6 +163,9 @@ export default class Menu extends React.Component {
 const styles = StyleSheet.create({
   menuBar: {
     flexDirection: "row",
+    justifyContent: 'space-evenly',
+    // backgroundColor: 'blue',
+    width: '90%'
   },
   price: {
     color: "white",
