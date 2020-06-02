@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   },
   h21: {
     fontWeight: "bold",
-    color: "white",
+    color: "white", 
     fontSize: 25,
   },
   h3White: {
